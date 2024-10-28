@@ -13,9 +13,9 @@
 		},
 		"statistics":	{
 			"numHole":	[20, 20],
-			"numParts":	8,
-			"numWires":	54,
-			"numCmtTags":	36
+			"numParts":	11,
+			"numWires":	60,
+			"numCmtTags":	39
 		},
 		"options":	{
 			"showBackWiresOnFrontWindow":	true,
@@ -63,7 +63,7 @@
 				"namePMF":	"LED",
 				"namePmodel":	"5mm-Clr",
 				"deg":	270,
-				"pos":	[8, 16],
+				"pos":	[8, 17],
 				"zOrder":	2,
 				"annotation":	1,
 				"vals":	["", "", ""],
@@ -72,7 +72,7 @@
 				"namePMF":	"LED",
 				"namePmodel":	"5mm-Clr",
 				"deg":	270,
-				"pos":	[11, 16],
+				"pos":	[11, 17],
 				"zOrder":	5,
 				"annotation":	2,
 				"vals":	["", "", ""],
@@ -93,6 +93,33 @@
 				"pos":	[17, 13],
 				"zOrder":	7,
 				"annotation":	1,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"namePMF":	"Tr",
+				"namePmodel":	"TO-92",
+				"deg":	0,
+				"pos":	[3, 5],
+				"zOrder":	8,
+				"annotation":	0,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"namePMF":	"R",
+				"namePmodel":	"RD-10.16",
+				"deg":	90,
+				"pos":	[6, 1],
+				"zOrder":	9,
+				"annotation":	3,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"namePMF":	"R",
+				"namePmodel":	"RD-7.62",
+				"deg":	0,
+				"pos":	[3, 6],
+				"zOrder":	10,
+				"annotation":	4,
 				"vals":	["", "", ""],
 				"comment":	""
 			}],
@@ -188,10 +215,10 @@
 				"comment":	""
 			}, {
 				"side":	"back",
-				"shielded":	true,
+				"shielded":	false,
 				"pos":	[4, 4],
-				"pos2":	[4, 16],
-				"color":	"0x64FF64",
+				"pos2":	[4, 5],
+				"color":	"0xFF",
 				"annotation":	44,
 				"vals":	["", "", ""],
 				"comment":	""
@@ -217,7 +244,7 @@
 				"side":	"front",
 				"shielded":	false,
 				"pos":	[3, 9],
-				"pos2":	[3, 0],
+				"pos2":	[3, 6],
 				"color":	"0xFF0000",
 				"annotation":	12,
 				"vals":	["", "", ""],
@@ -450,8 +477,8 @@
 			}, {
 				"side":	"back",
 				"shielded":	false,
-				"pos":	[11, 15],
-				"pos2":	[11, 14],
+				"pos":	[8, 16],
+				"pos2":	[8, 13],
 				"color":	"0xFF",
 				"annotation":	32,
 				"vals":	["", "", ""],
@@ -477,15 +504,6 @@
 			}, {
 				"side":	"back",
 				"shielded":	false,
-				"pos":	[8, 13],
-				"pos2":	[8, 15],
-				"color":	"0xFF",
-				"annotation":	41,
-				"vals":	["", "", ""],
-				"comment":	""
-			}, {
-				"side":	"back",
-				"shielded":	false,
 				"pos":	[3, 19],
 				"pos2":	[3, 17],
 				"color":	"0xFF",
@@ -496,7 +514,7 @@
 				"side":	"back",
 				"shielded":	false,
 				"pos":	[3, 9],
-				"pos2":	[3, 0],
+				"pos2":	[3, 6],
 				"color":	"0xFF",
 				"annotation":	43,
 				"vals":	["", "", ""],
@@ -504,8 +522,8 @@
 			}, {
 				"side":	"back",
 				"shielded":	false,
-				"pos":	[11, 16],
-				"pos2":	[11, 17],
+				"pos":	[11, 17],
+				"pos2":	[8, 17],
 				"color":	"0xFF",
 				"annotation":	46,
 				"vals":	["", "", ""],
@@ -513,17 +531,8 @@
 			}, {
 				"side":	"back",
 				"shielded":	false,
-				"pos":	[4, 0],
-				"pos2":	[5, 0],
-				"color":	"0xFF",
-				"annotation":	45,
-				"vals":	["", "", ""],
-				"comment":	""
-			}, {
-				"side":	"back",
-				"shielded":	false,
-				"pos":	[11, 17],
-				"pos2":	[12, 17],
+				"pos":	[12, 17],
+				"pos2":	[11, 17],
 				"color":	"0xFF",
 				"annotation":	47,
 				"vals":	["", "", ""],
@@ -531,19 +540,10 @@
 			}, {
 				"side":	"back",
 				"shielded":	false,
-				"pos":	[8, 16],
-				"pos2":	[8, 17],
+				"pos":	[11, 16],
+				"pos2":	[11, 14],
 				"color":	"0xFF",
 				"annotation":	48,
-				"vals":	["", "", ""],
-				"comment":	""
-			}, {
-				"side":	"back",
-				"shielded":	false,
-				"pos":	[8, 17],
-				"pos2":	[11, 17],
-				"color":	"0xFF",
-				"annotation":	49,
 				"vals":	["", "", ""],
 				"comment":	""
 			}, {
@@ -582,8 +582,105 @@
 				"annotation":	53,
 				"vals":	["", "", ""],
 				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	false,
+				"pos":	[3, 5],
+				"pos2":	[3, 0],
+				"color":	"0xFF0000",
+				"annotation":	41,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"back",
+				"shielded":	false,
+				"pos":	[3, 5],
+				"pos2":	[3, 0],
+				"color":	"0xFF",
+				"annotation":	49,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"back",
+				"shielded":	false,
+				"pos":	[6, 5],
+				"pos2":	[5, 5],
+				"color":	"0xFF",
+				"annotation":	62,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	false,
+				"pos":	[3, 6],
+				"pos2":	[3, 5],
+				"color":	"0xFF0000",
+				"annotation":	45,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"back",
+				"shielded":	false,
+				"pos":	[3, 6],
+				"pos2":	[3, 5],
+				"color":	"0xFF",
+				"annotation":	54,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	true,
+				"pos":	[15, 0],
+				"pos2":	[8, 0],
+				"color":	"0xFF6464",
+				"annotation":	55,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	true,
+				"pos":	[15, 2],
+				"pos2":	[15, 0],
+				"color":	"0xFF6464",
+				"annotation":	56,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	true,
+				"pos":	[15, 2],
+				"pos2":	[8, 2],
+				"color":	"0xFF6464",
+				"annotation":	57,
+				"vals":	["", "", ""],
+				"comment":	""
+			}, {
+				"side":	"front",
+				"shielded":	true,
+				"pos":	[8, 2],
+				"pos2":	[8, 0],
+				"color":	"0xFF6464",
+				"annotation":	58,
+				"vals":	["", "", ""],
+				"comment":	""
 			}],
 		"cmtTags":	[{
+				"side":	"front",
+				"xyb":	["8.545455", "18.000000"],
+				"bgColor":	"0xFFFFFF",
+				"chrColor":	"0x0",
+				"annotation":	14,
+				"vals":	["", "", ""],
+				"comment":	"(SW)"
+			}, {
+				"side":	"front",
+				"xyb":	["13.363636", "19.818182"],
+				"bgColor":	"0xFFFFFF",
+				"chrColor":	"0x0",
+				"annotation":	37,
+				"vals":	["", "", ""],
+				"comment":	"ISP"
+			}, {
 				"side":	"front",
 				"xyb":	["2.272727", "-1.363636"],
 				"bgColor":	"0xFFFFFF",
@@ -841,15 +938,7 @@
 				"comment":	"UPDI"
 			}, {
 				"side":	"back",
-				"xyb":	["4.045455", "-1.136364"],
-				"bgColor":	"0xFFFFFF",
-				"chrColor":	"0x0",
-				"annotation":	33,
-				"vals":	["", "", ""],
-				"comment":	"TxD"
-			}, {
-				"side":	"back",
-				"xyb":	["5.000000", "3.545455"],
+				"xyb":	["4.181818", "-1.363636"],
 				"bgColor":	"0xFFFFFF",
 				"chrColor":	"0x0",
 				"annotation":	34,
@@ -871,6 +960,22 @@
 				"annotation":	36,
 				"vals":	["", "", ""],
 				"comment":	"VCC"
+			}, {
+				"side":	"back",
+				"xyb":	["13.272727", "19.818182"],
+				"bgColor":	"0xFFFFFF",
+				"chrColor":	"0x0",
+				"annotation":	38,
+				"vals":	["", "", ""],
+				"comment":	"ISP"
+			}, {
+				"side":	"back",
+				"xyb":	["4.000000", "19.727273"],
+				"bgColor":	"0xFFFFFF",
+				"chrColor":	"0x0",
+				"annotation":	39,
+				"vals":	["", "", ""],
+				"comment":	"UPDI"
 			}]
 	}
 }
