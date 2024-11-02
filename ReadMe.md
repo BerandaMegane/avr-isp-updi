@@ -22,6 +22,11 @@ SerialUPDI 参考サイト
 
 ### Simple version
 
+仕様は次のとおりです。
+* 絶縁はされていません
+* Arduino 側から 5V が電源供給されています
+* スイッチに応じて書き込みモード (UPDI or ISP) を切り替えられます
+
 ![Circuit diagram](./CircuitDesign/simple_ver1.png)
 
 ## Board design 基板設計
@@ -40,7 +45,7 @@ Arduino 用ユニバーサル基板（Sunhayato UB-ARD03）で製作していま
 
 ## Arduino Sketch スケッチプログラム
 
-[改造した ArduinoISP](./ArduinoISP_modify/ArduinoISP_modify.ino) を Arduino へ書き込むことで、書込み器として使えるようになります。  
+[改造した ArduinoISP](./ArduinoISP_modify/ArduinoISP_modify.ino) を Arduino へ書き込むことで、書込み器として使えるようになります。書き込む際は、スタック基板を外しておかないと失敗する可能性があります。  
 書込み器のモードは、Arduino リセット時のスイッチ状態によって切り替わります。
 
 Arduino UNO R3 と avrdude で動作を確認しています。
