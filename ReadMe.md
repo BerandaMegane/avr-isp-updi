@@ -12,7 +12,7 @@ SerialUPDI 参考サイト
 * ikkei blog - [USB to UPDI](https://blog.goo.ne.jp/jh3kxm/e/9bf429adc58bc09dc164e5ef30397f1f)
 * GitHub - [SpenceKonde/AVR-Guidance - /UPDI/jtag2updi.md](https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md)
 
-<img src="img/01.jpg" alt="top" width="45%"><img src="img/02.jpg" alt="bottom" width="45%"><img src="img/03.jpg" alt="using" width="45%">
+<img src="img/03.jpg" alt="using" width="45%">
 
 ## Circuit design 回路設計
 
@@ -20,12 +20,10 @@ SerialUPDI 参考サイト
 
 * BSch3V - https://www.suigyodo.com/online/schsoft.htm
 
-### Simple version
-
 仕様は次のとおりです。
-* 絶縁はされていません
-* Arduino 側から 5V が電源供給されています
-* スイッチに応じて書き込みモード (UPDI or ISP) を切り替えられます
+* 絶縁はされていません / Not isolation.
+* Arduino 側から 5V が電源供給されています / Power is supplied from the Arduino in 5V.
+* スイッチに応じて書き込みモード (UPDI or ISP) を切り替えられます / Programmer mode can be changed with a switch.
 
 ![Circuit diagram](./CircuitDesign/simple_ver1.png)
 
@@ -36,23 +34,26 @@ Arduino 用ユニバーサル基板（Sunhayato UB-ARD03）で製作していま
 
 * marmelo - https://motchy99.blog.fc2.com/blog-entry-70.html
 
-### Simple version
-
 画像に記載していない配線および部品が多数存在しますので、注意が必要です。
 
 ![Board front](./BoardDesign/simple_ver1a.bmp)
 ![Board back](./BoardDesign/simple_ver1b.bmp)
 
+<img src="img/01.jpg" alt="top" width="45%"><img src="img/02.jpg" alt="bottom" width="45%">
+
 ## Arduino Sketch スケッチプログラム
 
 [改造した ArduinoISP](./ArduinoISP_modify/ArduinoISP_modify.ino) を Arduino へ書き込むことで、書込み器として使えるようになります。書き込む際は、スタック基板を外しておかないと失敗する可能性があります。  
-書込み器のモードは、Arduino リセット時のスイッチ状態によって切り替わります。
+書込み器のモードは、Arduino リセット時のスイッチ状態によって切り替わります。  
+スイッチング回路がある関係であまり高速なスピードは設定できません。
 
 Arduino UNO R3 と avrdude で動作を確認しています。
 
 ### ISP (ArduinoISP) モード
 
 Arduino リセットをかけたとき、SW が閉じていると ISP モードになり、 D4 に接続された LED が点灯します。
+
+When you reset the Arduino, if the SW is closed, it will enter ISP mode and the LED connected to D4 will light up.
 
 ```:avrdude コマンド例
 avrdude -c arduino_as_isp -b 19200 -P [ポート番号] ...
@@ -61,7 +62,8 @@ avrdude -c arduino_as_isp -b 19200 -P [ポート番号] ...
 ### UPDI (SerialUPDI) モード
 
 Arduino リセットをかけたとき、SW が開いていると UPDI モードになり、 D5 に接続された LED が点灯します。  
-スイッチング回路がある関係であまり高速なスピードは設定できません。
+
+When you reset the Arduino, if the SW is opened, it will enter UPDI mode and the LED connected to D5 will light up.
 
 ```:avrdude コマンド例
 avrdude -c serialupdi -b 100000 -P [ポート番号] ...
